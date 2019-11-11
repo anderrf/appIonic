@@ -7,6 +7,18 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  private peso: number;
+  private altura: number;
+  private imc: number;
+
   constructor() {}
+
+  calcularIMC(){
+    this.imc = this.peso / this.altura * this.altura;
+  }
+
+  exibeIMC(): number{
+    return this.imc;
+  }
 
 }
